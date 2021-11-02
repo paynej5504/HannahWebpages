@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+<title>Clark State Electronic Health Record</title>
+<link rel="stylesheet" href="../lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/css/tether.min.css'>
+</head>
+<body>
+
+<nav class="w3-sidenav w3-light-grey w3-card-2" style="width:160px;">
+  <div class="w3-accordion">
+    <a onclick="func1()" href="#">
+      Patient Selection <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="dashboard" class="w3-accordion-content w3-white w3-card-4">
+      <a href="#">Patient Dashboard</a>
+      <a href="#">History</a>
+      <a href="#">Imaging</a>
+      <a href="#">Labs</a>
+      <a href="#">Care Plan</a>
+    </div>
+        <a onclick="func2()" href="#">
+         Vitals <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="vitals" class="w3-accordion-content w3-white w3-card-4">
+          <a href="#">Vitals</a>
+          <a href="#">Weight</a>
+          <a href="#">Pain</a>
+          <a href="#">Input</a>
+          <a href="#">Output</a>
+        </div>
+        <a onclick="func3()" href="#">
+            Patient Assessment<i class="fa fa-caret-down"></i>
+           </a>
+           <div id="patientA" class="w3-accordion-content w3-white w3-card-4">
+             <a href="#">Daily Care</a>
+             <a onclick="func6()" href="#">
+                Daily Care<i class="fa fa-caret-down"></i>
+
+               </a>
+
+
+
+             <a href="#">General Head</a>
+             <a href="#">Cardiovascular</a>
+             <a href="#">Peripheral Pulse Assessment</a>
+             <a href="#">Gastrointestinal</a>
+             <a href="#">Genitourinary</a>
+             <a href="#">Integumentary</a>
+             <a href="#">Musculoskeletal</a>
+             <a href="#">Nuerological</a>
+             <a href="#">Psychosocial</a>
+             <a href="#">Respiratory</a>
+             <a href="#">Safety</a>
+             <a href="#">Infection</a>
+             <a href="#">Vascular</a>
+             <a href="#">Drains & Tubes</a>
+           </div>
+           <a onclick="func4()" href="#">
+            Order Entry <i class="fa fa-caret-down"></i>
+           </a>
+           <div id="orderE" class="w3-accordion-content w3-white w3-card-4">
+             <a href="#">Vitals</a>
+             <a href="#">Weight</a>
+             <a href="#">Pain</a>
+             <a href="#">Input</a>
+             <a href="#">Output</a>
+           </div>
+           <a onclick="func5()" href="#">
+            Medication Admin<i class="fa fa-caret-down"></i>
+           </a>
+           <div id="medAdmin" class="w3-accordion-content w3-white w3-card-4">
+             <a href="#">Scheduled Medications</a>
+             <a href="#">PRN Medications</a>
+             <a href="#">Continous Medications</a>
+             <a href="#">Respiratory Medications</a>
+             <a href="#">Discontinued Medications</a>
+           </div>
+  </div>
+</nav>
+
+<script>
+function func1() {
+    var x = document.getElementById("dashboard");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+function func2() {
+    var x = document.getElementById("vitals");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+function func3() {
+    var x = document.getElementById("patientA");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+function func4() {
+    var x = document.getElementById("orderE");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+function func5() {
+    var x = document.getElementById("medAdmin");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+</script>
+ <!--patient card along top-->
+ <div class="container">
+    <div class="row">
+      <div   id="patientInfo" style="margin: auto;">
+          <div style="float: left;">
+              <img src="img/MichaelScott.png" alt="..." class="card-img-left" style="width: 170px;">
+          </div>
+          <div style="float: left;">
+              <table class="table table-borderless" style="margin: 0 auto; display: table; background-color: #006A99;">
+                  <thead style="color: white;">
+                  <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Age</th>
+                      <th scope="col">Gender</th>
+                      <th scope="col">MR#</th>
+                      <th scope="col">Provider</th>
+                  </tr>
+                  </thead>
+                  <tbody style="color: white;">
+                      
+                  <tr>
+                      <td>Michael Scott</td>
+                      <td>56</td>
+                      <td>Male</td>
+                      <td>1245783</td>
+                      <td>Health Insurance</td>
+                  </tr>
+                  <tr>
+                      <td style="font-weight: bold;">Room #</td>
+                      <td style="font-weight: bold;">DOB</td>
+                      <td style="font-weight: bold;">Admit Date</td>
+                      <td style="font-weight: bold;">Code</td>
+                      <td style="font-weight: bold;">Allergies</td>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                      <td>3/15/1965</td>
+                      <td>9/9/2021</td>
+                      <td>Full Code</td>
+                      <td>None</td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+<!--Tabs-->
+<div class="container">
+    <div class="row justify-content-center">
+<div class="col-12">
+  <ul class="nav nav-tabs" style="margin-top: 30px;">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Imaging</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Labs</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Care Plan</a>
+      </li>
+    </ul>
+</div>
+</div>
+</div>
+
+<!--Health Section-->
+<div class="container">
+  <div class="row">
+    <div   id="patientInfo" style="margin: auto;">
+        <div>
+            <table class="table table-borderless" style="margin: 0 auto; display: table; background-color: #B0D1E0; max-width: 100%; width: 1110px;">
+                <thead style="color: #006A99;; font-size: larger;">
+                <tr>
+                    <th scope="col">Health</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody style="color: Black;">
+                <tr>
+                    <th>Medical Number:</th>
+                    <td>12345</td>
+                    <th>Diet:</th>
+                    <td>Regular</td>
+                    <th>Braden Scale:</th>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <th>Allergies:</th>
+                    <td>None</td>
+                    <th>Fall Rate:</th>
+                    <td>None</td>
+                    
+                </tr>
+                <tr>
+                    <th></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    
+                    <td><button type="button" class="btn btn-warning">Edit</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--Vitals Section-->
+<div class="container" style="padding-top: 30px;">
+  <div class="row">
+    <div   id="patientInfo" style="margin: auto;">
+        <div>
+            <table class="table table-borderless" style="margin: 0 auto; display: table; background-color: #DBE1E4; max-width: 100%; width: 1110px;">
+                <thead style="color: #006A99;; font-size: larger;">
+                <tr>
+                    <th scope="col">Vitals</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody style="color: Black;">
+                <tr>
+                    <th>Blood Pressure:</th>
+                    <td>120/80</td>
+                    <th>Respiration:</th>
+                    <td>14</td>
+                    <th>Temperature:</th>
+                    <td>98.5</td>
+                </tr>
+                <tr>
+                    <th>Pulse:</th>
+                    <td>70</td>
+                    <th>Oxygen Level:</th>
+                    <td>95%</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button type="button" class="btn btn-warning">Edit</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--Hospital Information Section-->
+<div class="container" style="padding-top: 30px;">
+  <div class="row">
+    <div   id="patientInfo" style="margin: auto;">
+        <div>
+            <table class="table table-borderless" style="margin: 0 auto; display: table; background-color: #B0D1E0; max-width: 100%; width: 1110px;">
+                <thead style="color: #006A99;; font-size: larger;">
+                <tr>
+                    <th scope="col">Hospital Information</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody style="color: Black;">
+                <tr>
+                    <th>Room Number:</th>
+                    <td>1</td>
+                    <th>Admit Date:</th>
+                    <td>9/9/2021</td>
+                    <th>Code</th>
+                    <td>Full Code</td>
+                </tr>
+                <tr>
+                    <th>Diagnosis:</th>
+                    <td>Annual Checkup</td>
+                    <th>Isolation Status:</th>
+                    <td>None</td>
+                    <th>Activity Level:</th>
+                    <td>N/A</td>
+                    
+                </tr>
+                <tr>
+                    <th></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button type="button" class="btn btn-warning">Edit</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--Footer-->
+<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50" style="margin-top: 80px;">
+  <div class="container text-center">
+    <small>Copyright &copy; Clark State College Medical Center 2021</small>
+  </div>
+</footer>
+</body>
+<!-- /#page-content-wrapper -->
+</div>
+</body>
+</html>
